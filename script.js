@@ -44,6 +44,8 @@ function checkGuess() {
     const userGuess = document.getElementById("guess").value.trim().toLowerCase();
     // Check if the user's guess is correct
     let result = document.getElementById("result");
+
+    // instead of an alert, we decided to create a separate div element that displays the result of the user's guess
     if (userGuess === currentWord) {
         result.textContent = "🎉 Correct! Kudos!";
         newGame();
