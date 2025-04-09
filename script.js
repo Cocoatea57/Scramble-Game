@@ -43,12 +43,13 @@ function checkGuess() {
     // Get the user's guess
     const userGuess = document.getElementById("guess").value.trim().toLowerCase();
     // Check if the user's guess is correct
+    let result = document.getElementById("result");
     if (userGuess === currentWord) {
-        alert("🎉 Correct! Kudos!");
+        result.textContent = "🎉 Correct! Kudos!";
         newGame();
     } 
     else {
-        alert("Wrong! Try again.");
+        result.textContent = "Wrong! Try again.";
     }
 }
 
